@@ -52,8 +52,8 @@
       <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
+            <h2 id="demo1"></h1>
             <h1 id="demo"></h1>
-            
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
@@ -104,12 +104,14 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "You are about to start a new year in " + days + "d " + hours + "h "
+  document.getElementById("demo1").innerHTML = "You are about to start a new year in ";
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h ";
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
+    document.getElementById("demo1").innerHTML = "";
     document.getElementById("demo").innerHTML = "Happy New Year 2022!!!";
   }
 }, 1000);
